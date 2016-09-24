@@ -2,14 +2,18 @@
 <html>
 	<head>
 		<title>Dandelions</title>
-     <meta name="viewport" content="width=device-width, initial-scale=1">
-	   <link type = "text/css" rel = "stylesheet" href = "blowstyle.css"/>
-     <script src="blowscript.js"></script>
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link type = "text/css" rel = "stylesheet" href = "blowstyle.css"/>
+		<link rel "stylehsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	</head>
 
-<body class="body">
-
-<h1>Dandelions in the Wind</h1>
+<body class="body" onkeypress = "keyPressCount()">
+	<div id = "top">
+		<h1>Dandelion</h1>
+		<button class="menu-button" onclick="toggle('grid', 'menu')">New Game</button> 
+        <div class = bestScore>BEST</div>
+        <div class = scoreBoard>SCORE</div>
+	</div>
 
 	<div class="menu" id="menu">
         <div class="menu-row">
@@ -248,18 +252,16 @@
             <div class="grid-cell" id="margin" name="11-10"></div>
             <div class="grid-cell" id="margin" name="11-11"></div>
           </div> 
-           
+                
           <div class="description">
             <p>
               Blow through the empty spaces!
             </p>
-            <button class="menu-button" onclick="toggle('grid', 'menu')">Go to menu</button> 
           </div>          
         </div>
 
-
-
 </body>
 
-
+    <script src="blowscript.js"></script>
+    
 </html>

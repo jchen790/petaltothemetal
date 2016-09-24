@@ -4,13 +4,54 @@ div {
 
 h1 {
     font-family: "Verdana";
-    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    margin-left: 210px;
 }
 
-p {
-    font-family: "Verdana";
-    font-size: 20px;
+#top {
+    display: block;
+}
+
+.menu-button {
+    display: inline-block;
+    width: 115px;
+    height: 50px;
+    background: #009900;
     text-align: center;
+    border: none;
+    margin-left: 25px;
+    border-radius: 5px;
+    font-size: 15px;
+    margin-right: 5px;
+}
+
+.bestScore {
+    position: absolute;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background: #009900;
+    text-align: center;
+    border: none;
+    margin-left: 105px;
+    border-radius: 5px;
+    font-size: 15px;
+}
+
+.scoreBoard {
+    position: absolute;
+    margin-top: 20px;
+    display: inline-block;
+    width: 100px;
+    height: 50px;
+    background: #009900;
+    text-align: center;
+    border: none;
+    margin-left: 110;
+    border-radius: 5px;
+    font-size: 15px;
 }
 
 .body {
@@ -58,16 +99,6 @@ p {
     text-align: center;
 }
 
-.menu-cell a {
-    text-decoration: none;
-    color: black;
-}
-
-.menu-cell a:hover {
-    background: #a7cce5;
-    text-decoration: none;
-}
-
 .grid-container {
     display: none;
     margin-top: 40px;
@@ -83,8 +114,8 @@ p {
     touch-action: none;
     background: green;
     border-radius: 6px;
-    width: 715px;
-    height: 685px;
+    width: 540px;
+    height: 515px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
@@ -96,8 +127,8 @@ p {
 }
 
 .grid-cell {
-    width: 40px;
-    height: 40px;
+    width: 26px;
+    height: 26px;
     margin-right: 15px;
     float: right;
     border-radius: 100px;
@@ -116,28 +147,33 @@ p {
     border: none;
 }
 
-.level-button a:hover {
-    background: #a7cce5;
+.level-button:hover {
+    background: #33cc33;
     text-decoration: none;
+    cursor: pointer;
 }
 
-.menu-button {
-    display: block;
-    width: 100px;
-    height: 25px;
-    margin: 0 auto;
-    background: #919191;
-    text-align: center;
-    border: none;
+.menu-button:hover {
+    background: #33cc33;
+    text-decoration: none;
+    cursor: pointer;
 }
 
 .description {
     position: bottom;
-    margin-top: 20px;
-    padding-top: 650px;
+    margin-top: 10px;
+    padding-top: 500px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: "Verdana";
+    font-size: 20px;
+    text-align: center;
 }
 
 .dandelion {
     display: block;
     margin: auto;
 }
+
