@@ -9,24 +9,35 @@ h1 {
     margin-left: 210px;
 }
 
+h3 {
+    font-family: "Verdana";
+    margin-top: 5px;
+}
+
+h5 {
+    font-family: "Verdana";
+    margin-top: 5px;
+}
+
 #top {
     display: block;
 }
 
 .menu-button {
     display: inline-block;
-    width: 115px;
-    height: 50px;
+    position: relative;
+    width: 355px;
+    height: 40px;
     background: #009900;
     text-align: center;
     border: none;
-    margin-left: 25px;
-    border-radius: 5px;
+    border-radius: 6px;
     font-size: 15px;
-    margin-right: 5px;
+    margin-bottom: 15px;
 }
 
 .bestScore {
+    font-family: "Verdana";
     position: absolute;
     margin-top: 20px;
     display: inline-block;
@@ -35,12 +46,14 @@ h1 {
     background: #009900;
     text-align: center;
     border: none;
-    margin-left: 105px;
-    border-radius: 5px;
+    margin-left: 280px;
+    border-radius: 6px;
     font-size: 15px;
+    margin-top: 40px;
 }
 
 .scoreBoard {
+    font-family: "Verdana";
     position: absolute;
     margin-top: 20px;
     display: inline-block;
@@ -49,9 +62,19 @@ h1 {
     background: #009900;
     text-align: center;
     border: none;
-    margin-left: 110;
-    border-radius: 5px;
+    margin-left: 160px;
+    border-radius: 6px;
     font-size: 15px;
+    margin-top: 40px;
+    right: 126px !important;
+}
+
+.returning {
+    position: absolute;
+    width: 210px;
+    height: 35px;
+    top: 105px;
+    right: 16px;
 }
 
 .body {
@@ -75,9 +98,9 @@ h1 {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: green;
+    background: #009900;
     border-radius: 6px;
-    width: 275px;
+    width: 355px;
     height: 300px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
@@ -90,13 +113,14 @@ h1 {
 }
 
 .menu-cell {
-    width: 60px;
-    height: 25px;
+    width: 90px;
+    height: 35px;
     margin-right: 15px;
     float: left;
     background: rgba(238, 228, 218, 0.35);
     margin-bottom: 15px;
     text-align: center;
+    border-radius: 6px;
 }
 
 .grid-container {
@@ -137,20 +161,24 @@ h1 {
 }
 
 .level-button {
-    width: 60px;
-    height: 25px;
+    font-family: "Verdana";
+    font-size: 14px;
+    width: 90px;
+    height: 35px;
     margin-right: 15px;
     float: left;
     background: rgba(238, 228, 218, 0.35);
     margin-bottom: 15px;
     text-align: center;
     border: none;
+    border-radius: 6px;
 }
 
 .level-button:hover {
     background: #33cc33;
     text-decoration: none;
     cursor: pointer;
+    font-family:"Verdana";
 }
 
 .menu-button:hover {
@@ -168,8 +196,15 @@ h1 {
 
 p {
     font-family: "Verdana";
-    font-size: 20px;
+    font-size: 18px;
     text-align: center;
+}
+
+.small {
+    font-family: "Verdana";
+    font-size: 14px;
+    text-align: center;
+    margin-top: 6px;
 }
 
 .dandelion {
@@ -177,3 +212,31 @@ p {
     margin: auto;
 }
 
+.logo {
+    width: 370px;
+    height: 135px;
+}
+
+.top-right {
+    position: absolute;
+    top: 8px;
+    right: 16px;
+}
+
+.top-left {
+    position: absolute;
+    top: 24px;
+    left: 16px;
+}
+
+.center {
+    position: relative;
+    top: 170px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.center-cell {
+    position: relative;
+    left: 105px;
+}
