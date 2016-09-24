@@ -19,8 +19,12 @@
 	Moving(0,0);">
 	<div class="row" id = "top">
     <img src="images/dandelion_logo.png" class="logo top-left">
-        <div class = "bestScore top-right"><h5>BEST</h5></div>
-        <div class = "scoreBoard top-right"><h5>SCORE</h5></div>
+        <div class = "bestScore top-right"><h5>BEST</h5>
+       		<div id = "best">0</div>
+       	</div>
+        <div class = "scoreBoard top-right"><h5>SCORE</h5>
+        	<div id="score">0</div>
+        </div>
         <button class="menu-button returning" onclick="toggle('grid', 'start-menu')"><p class="small">Main menu</p></button>
 	</div>
 
@@ -263,3 +267,5 @@
     <script src="blowscript.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </html>
+
+
