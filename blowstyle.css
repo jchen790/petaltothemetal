@@ -2,10 +2,29 @@ div {
     display: block;
 }
 
+h1 {
+    font-family: "Verdana";
+    text-align: center;
+}
+
+p {
+    font-family: "Verdana";
+    font-size: 20px;
+    text-align: center;
+}
+
+.body {
+    background: #fff7e6;
+}
+
+#margin {
+   background: gray;
+}
+
 .grid-container {
     margin-top: 40px;
     position: relative;
-    padding: 12px;
+    padding: 20px;
     cursor: default;
     -webkit-touch-callout: none;
     -ms-touch-callout: none;
@@ -14,13 +33,14 @@ div {
     -ms-user-select: none;
     -ms-touch-action: none;
     touch-action: none;
-    background: #bbada0;
+    background: green;
     border-radius: 6px;
-    width: 450px;
-    height: 450px;
+    width: 715px;
+    height: 685px;
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
+    margin: auto;
 }
 
 .grid-row {
@@ -28,10 +48,11 @@ div {
 }
 
 .grid-cell {
-    width: 90px;
-    height: 90px;
-    margin-right: 12px;
-    float: left;
+    width: 40px;
+    height: 40px;
+    margin-right: 15px;
+    float: right;
     border-radius: 100px;
     background: rgba(238, 228, 218, 0.35);
+    margin-bottom: 15px;
 }
