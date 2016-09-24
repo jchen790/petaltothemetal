@@ -57,6 +57,11 @@ p {
     text-align: center;
 }
 
+.menu-cell a {
+    text-decoration: none;
+    color: black;
+}
+
 .menu-cell a:hover {
     background: #a7cce5;
     text-decoration: none;
