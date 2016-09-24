@@ -9,81 +9,57 @@
 
 <body class="body" onkeypress = "keyPressCount()">
 	<div class="row" id = "top">
-    <img src="images/dandelion_logo.png" class="logo col-sm-6">
-		<button class="menu-button col-sm-2" onclick="toggle('grid', 'menu')">New Game</button> 
-        <div class = "bestScore col-sm-2">BEST</div>
-        <div class = "scoreBoard col-sm-2">SCORE</div>
+    <img src="images/dandelion_logo.png" class="logo top-left">
+        <div class = "bestScore top-right"><h5>BEST</h5></div>
+        <div class = "scoreBoard top-right"><h5>SCORE</h5></div>
+        <button class="menu-button returning" onclick="toggle('grid', 'start-menu')"><p class="small">Main menu</p></button>
 	</div>
 
-	<div class="menu" id="menu">
-        <div class="menu-row">
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 1</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 2</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 3</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 4</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 5</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 6</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 7</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 8</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 9</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 10</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 11</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 12</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 13</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 14</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 15</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 16</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 17</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 18</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 19</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 20</button>
-          </div>
-          <div class="menu-cell">
-            <button class="level-button" onclick="toggle('menu', 'grid')">Level 21</button>
-          </div>
-        </div>
+	<div class="center" id="start-menu">
+    <div>
+      <button class="menu-button" onclick="toggle('start-menu', 'grid')"><h3>Start new game</h3></button>
     </div>
 
-      <div class="grid-container" id="grid">
+    <h3>Or</h3>
+
+      <div class="menu">
+        <div class="menu-row">
+          <h3>Choose a level</h3>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 1</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 2</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 3</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 4</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 5</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 6</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 7</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 8</button>
+          </div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 9</button>
+          </div>
+          <div class="menu-cell center-cell">
+            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 10</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+      <div class="grid-container center" id="grid">
           <div class="grid-row">
             <div class="grid-cell" id="margin" name="0-0"></div>
             <div class="grid-cell" id="margin" name="0-1"></div>
@@ -256,6 +232,9 @@
           <div class="description">
             <p>
               Blow through the empty spaces!
+            </p>
+            <p class="small">
+              How to play: Use the arrow keys to spread seeds across the board.
             </p>
           </div>          
         </div>
