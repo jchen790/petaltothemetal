@@ -15,6 +15,7 @@ h1 {
 
 .menu-button {
     display: inline-block;
+    position: absolute;
     width: 115px;
     height: 50px;
     background: #009900;
@@ -24,6 +25,7 @@ h1 {
     border-radius: 5px;
     font-size: 15px;
     margin-right: 5px;
+    margin-top: 40px;
 }
 
 .bestScore {
@@ -35,9 +37,10 @@ h1 {
     background: #009900;
     text-align: center;
     border: none;
-    margin-left: 105px;
+    margin-left: 280px;
     border-radius: 5px;
     font-size: 15px;
+    margin-top: 40px;
 }
 
 .scoreBoard {
@@ -49,9 +52,10 @@ h1 {
     background: #009900;
     text-align: center;
     border: none;
-    margin-left: 110;
+    margin-left: 160px;
     border-radius: 5px;
     font-size: 15px;
+    margin-top: 40px;
 }
 
 .body {
@@ -177,3 +181,9 @@ p {
     margin: auto;
 }
 
+.logo {
+    display: absolute;
+    float: relative;
+    width: 370px;
+    height: 135px;
+}
