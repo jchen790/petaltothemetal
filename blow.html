@@ -2,16 +2,21 @@
 <html>
 	<head>
 		<title>Dandelions</title>
-		<link type = "text/css" rel = "stylesheet" href = "blowstyle.css"/>
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+	   <link type = "text/css" rel = "stylesheet" href = "blowstyle.css"/>
+     <script src="blowscript.js"></script>
 	</head>
 
 <body class="body">
 
 <h1>Dandelions in the Wind</h1>
 
-	<div class="menu">
+	<div class="menu" id="menu">
         <div class="menu-row">
-          <div class="menu-cell"><a href = "Level1">Level 1</a></div>
+          <div class="menu-cell">
+            <button class="level-button" onclick="toggle('menu', 'grid')">Level 1</button>
+            <!--<a href = "Level1">Level 1</a>-->
+          </div>
           <div class="menu-cell"><a href = "Level2">Level 2</a></div>
           <div class="menu-cell"><a href = "Level3">Level 3</a></div>
           <div class="menu-cell"><a href = "Level4">Level 4</a></div>
@@ -35,178 +40,185 @@
         </div>
     </div>
 
-    <div class="grid-container">
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="0-0"></div>
-          <div class="grid-cell" id="margin" name="0-1"></div>
-          <div class="grid-cell" id="margin" name="0-2"></div>
-          <div class="grid-cell" id="margin" name="0-3"></div>
-          <div class="grid-cell" id="margin" name="0-4"></div>
-          <div class="grid-cell" id="margin" name="0-5"></div>
-          <div class="grid-cell" id="margin" name="0-6"></div>
-          <div class="grid-cell" id="margin" name="0-7"></div>
-          <div class="grid-cell" id="margin" name="0-8"></div>
-          <div class="grid-cell" id="margin" name="0-9"></div>
-          <div class="grid-cell" id="margin" name="0-10"></div>
-          <div class="grid-cell" id="margin" name="0-11"></div>
+      <div class="grid-container" id="grid">
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="0-0"></div>
+            <div class="grid-cell" id="margin" name="0-1"></div>
+            <div class="grid-cell" id="margin" name="0-2"></div>
+            <div class="grid-cell" id="margin" name="0-3"></div>
+            <div class="grid-cell" id="margin" name="0-4"></div>
+            <div class="grid-cell" id="margin" name="0-5"></div>
+            <div class="grid-cell" id="margin" name="0-6"></div>
+            <div class="grid-cell" id="margin" name="0-7"></div>
+            <div class="grid-cell" id="margin" name="0-8"></div>
+            <div class="grid-cell" id="margin" name="0-9"></div>
+            <div class="grid-cell" id="margin" name="0-10"></div>
+            <div class="grid-cell" id="margin" name="0-11"></div>
+          </div>
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="1-0"></div>
+            <div class="grid-cell" name="1-1"></div>
+            <div class="grid-cell" name="1-2"></div>
+            <div class="grid-cell" name="1-3"></div>
+            <div class="grid-cell" name="1-4"></div>
+            <div class="grid-cell" name="1-5"></div>
+            <div class="grid-cell" name="1-6"></div>
+            <div class="grid-cell" name="1-7"></div>
+            <div class="grid-cell" name="1-8"></div>
+            <div class="grid-cell" name="1-9"></div>
+            <div class="grid-cell" name="1-10"></div>
+            <div class="grid-cell" id="margin" name="1-11"></div>
+          </div>
+      <div class="grid-row">
+            <div class="grid-cell" id="margin" name="2-0"></div>
+            <div class="grid-cell" name="2-1"></div>
+            <div class="grid-cell" name="2-2"></div>
+            <div class="grid-cell" name="2-3"></div>
+            <div class="grid-cell" name="2-4"></div>
+            <div class="grid-cell" name="2-5"></div>
+            <div class="grid-cell" name="2-6"></div>
+            <div class="grid-cell" name="2-7"></div>
+            <div class="grid-cell" name="2-8"></div>
+            <div class="grid-cell" name="2-9"></div>
+            <div class="grid-cell" name="2-10"></div>
+            <div class="grid-cell" id="margin" name="2-11"></div>
+          </div> 
+      <div class="grid-row">
+            <div class="grid-cell" id="margin" name="3-0"></div>
+            <div class="grid-cell" name="3-1"></div>
+            <div class="grid-cell" name="3-2"></div>
+            <div class="grid-cell" name="3-3"></div>
+            <div class="grid-cell" name="3-4"></div>
+            <div class="grid-cell" name="3-5"></div>
+            <div class="grid-cell" name="3-6"></div>
+            <div class="grid-cell" name="3-7"></div>
+            <div class="grid-cell" name="3-8"></div>
+            <div class="grid-cell" name="3-9"></div>
+            <div class="grid-cell" name="3-10"></div>
+            <div class="grid-cell" id="margin" name="3-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="4-0"></div>
+            <div class="grid-cell" name="4-1"></div>
+            <div class="grid-cell" name="4-2"></div>
+            <div class="grid-cell" name="4-3"></div>
+            <div class="grid-cell" name="4-4"></div>
+            <div class="grid-cell" name="4-5"></div>
+            <div class="grid-cell" name="4-6"></div>
+            <div class="grid-cell" name="4-7"></div>
+            <div class="grid-cell" name="4-8"></div>
+            <div class="grid-cell" name="4-9"></div>
+            <div class="grid-cell" name="4-10"></div>
+            <div class="grid-cell" id="margin" name="4-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="5-0"></div>
+            <div class="grid-cell" name="5-1"></div>
+            <div class="grid-cell" name="5-2"></div>
+            <div class="grid-cell" name="5-3"></div>
+            <div class="grid-cell" name="5-4"></div>
+            <div class="grid-cell" name="5-5"></div>
+            <div class="grid-cell" name="5-6"></div>
+            <div class="grid-cell" name="5-7"></div>
+            <div class="grid-cell" name="5-8"></div>
+            <div class="grid-cell" name="5-9"></div>
+            <div class="grid-cell" name="5-10"></div>
+            <div class="grid-cell" id="margin" name="5-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="6-0"></div>
+            <div class="grid-cell" name="6-1"></div>
+            <div class="grid-cell" name="6-2"></div>
+            <div class="grid-cell" name="6-3"></div>
+            <div class="grid-cell" name="6-4"></div>
+            <div class="grid-cell" name="6-5"></div>
+            <div class="grid-cell" name="6-6"></div>
+            <div class="grid-cell" name="6-7"></div>
+            <div class="grid-cell" name="6-8"></div>
+            <div class="grid-cell" name="6-9"></div>
+            <div class="grid-cell" name="6-10"></div>
+            <div class="grid-cell" id="margin" name="6-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="7-0"></div>
+            <div class="grid-cell" name="7-1"></div>
+            <div class="grid-cell" name="7-2"></div>
+            <div class="grid-cell" name="7-3"></div>
+            <div class="grid-cell" name="7-4"></div>
+            <div class="grid-cell" name="7-5"></div>
+            <div class="grid-cell" name="7-6"></div>
+            <div class="grid-cell" name="7-7"></div>
+            <div class="grid-cell" name="7-8"></div>
+            <div class="grid-cell" name="7-9"></div>
+            <div class="grid-cell" name="7-10"></div>
+            <div class="grid-cell" id="margin" name="7-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="8-0"></div>
+            <div class="grid-cell" name="8-1"></div>
+            <div class="grid-cell" name="8-2"></div>
+            <div class="grid-cell" name="8-3"></div>
+            <div class="grid-cell" name="8-4"></div>
+            <div class="grid-cell" name="8-5"></div>
+            <div class="grid-cell" name="8-6"></div>
+            <div class="grid-cell" name="8-7"></div>
+            <div class="grid-cell" name="8-8"></div>
+            <div class="grid-cell" name="8-9"></div>
+            <div class="grid-cell" name="8-10"></div>
+            <div class="grid-cell" id="margin" name="8-11"></div>
+          </div> 
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="9-0"></div>
+            <div class="grid-cell" name="9-1"></div>
+            <div class="grid-cell" name="9-2"></div>
+            <div class="grid-cell" name="9-3"></div>
+            <div class="grid-cell" name="9-4"></div>
+            <div class="grid-cell" name="9-5"></div>
+            <div class="grid-cell" name="9-6"></div>
+            <div class="grid-cell" name="9-7"></div>
+            <div class="grid-cell" name="9-8"></div>
+            <div class="grid-cell" name="9-9"></div>
+            <div class="grid-cell" name="9-10"></div>
+            <div class="grid-cell" id="margin" name="9-11"></div>
+          </div>     
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="10-0"></div>
+            <div class="grid-cell" name="10-1"></div>
+            <div class="grid-cell" name="10-2"></div>
+            <div class="grid-cell" name="10-3"></div>
+            <div class="grid-cell" name="10-4"></div>
+            <div class="grid-cell" name="10-5"></div>
+            <div class="grid-cell" name="10-6"></div>
+            <div class="grid-cell" name="10-7"></div>
+            <div class="grid-cell" name="10-8"></div>
+            <div class="grid-cell" name="10-9"></div>
+            <div class="grid-cell" name="10-10"></div>
+            <div class="grid-cell" id="margin" name="10-11"></div>
+          </div>    
+          <div class="grid-row">
+            <div class="grid-cell" id="margin" name="11-0"></div>
+            <div class="grid-cell" id="margin" name="11-1"></div>
+            <div class="grid-cell" id="margin" name="11-2"></div>
+            <div class="grid-cell" id="margin" name="11-3"></div>
+            <div class="grid-cell" id="margin" name="11-4"></div>
+            <div class="grid-cell" id="margin" name="11-5"></div>
+            <div class="grid-cell" id="margin" name="11-6"></div>
+            <div class="grid-cell" id="margin" name="11-7"></div>
+            <div class="grid-cell" id="margin" name="11-8"></div>
+            <div class="grid-cell" id="margin" name="11-9"></div>
+            <div class="grid-cell" id="margin" name="11-10"></div>
+            <div class="grid-cell" id="margin" name="11-11"></div>
+          </div> 
+           
+          <div class="description">
+            <p>
+              Blow through the empty spaces!
+            </p>
+            <button class="menu-button" onclick="toggle('grid', 'menu')">Go to menu</button> 
+          </div>          
         </div>
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="1-0"></div>
-          <div class="grid-cell" name="1-1"></div>
-          <div class="grid-cell" name="1-2"></div>
-          <div class="grid-cell" name="1-3"></div>
-          <div class="grid-cell" name="1-4"></div>
-          <div class="grid-cell" name="1-5"></div>
-          <div class="grid-cell" name="1-6"></div>
-          <div class="grid-cell" name="1-7"></div>
-          <div class="grid-cell" name="1-8"></div>
-          <div class="grid-cell" name="1-9"></div>
-          <div class="grid-cell" name="1-10"></div>
-          <div class="grid-cell" id="margin" name="1-11"></div>
-        </div>
-		<div class="grid-row">
-          <div class="grid-cell" id="margin" name="2-0"></div>
-          <div class="grid-cell" name="2-1"></div>
-          <div class="grid-cell" name="2-2"></div>
-          <div class="grid-cell" name="2-3"></div>
-          <div class="grid-cell" name="2-4"></div>
-          <div class="grid-cell" name="2-5"></div>
-          <div class="grid-cell" name="2-6"></div>
-          <div class="grid-cell" name="2-7"></div>
-          <div class="grid-cell" name="2-8"></div>
-          <div class="grid-cell" name="2-9"></div>
-          <div class="grid-cell" name="2-10"></div>
-          <div class="grid-cell" id="margin" name="2-11"></div>
-        </div> 
-		<div class="grid-row">
-          <div class="grid-cell" id="margin" name="3-0"></div>
-          <div class="grid-cell" name="3-1"></div>
-          <div class="grid-cell" name="3-2"></div>
-          <div class="grid-cell" name="3-3"></div>
-          <div class="grid-cell" name="3-4"></div>
-          <div class="grid-cell" name="3-5"></div>
-          <div class="grid-cell" name="3-6"></div>
-          <div class="grid-cell" name="3-7"></div>
-          <div class="grid-cell" name="3-8"></div>
-          <div class="grid-cell" name="3-9"></div>
-          <div class="grid-cell" name="3-10"></div>
-          <div class="grid-cell" id="margin" name="3-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="4-0"></div>
-          <div class="grid-cell" name="4-1"></div>
-          <div class="grid-cell" name="4-2"></div>
-          <div class="grid-cell" name="4-3"></div>
-          <div class="grid-cell" name="4-4"></div>
-          <div class="grid-cell" name="4-5"></div>
-          <div class="grid-cell" name="4-6"></div>
-          <div class="grid-cell" name="4-7"></div>
-          <div class="grid-cell" name="4-8"></div>
-          <div class="grid-cell" name="4-9"></div>
-          <div class="grid-cell" name="4-10"></div>
-          <div class="grid-cell" id="margin" name="4-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="5-0"></div>
-          <div class="grid-cell" name="5-1"></div>
-          <div class="grid-cell" name="5-2"></div>
-          <div class="grid-cell" name="5-3"></div>
-          <div class="grid-cell" name="5-4"></div>
-          <div class="grid-cell" name="5-5"></div>
-          <div class="grid-cell" name="5-6"></div>
-          <div class="grid-cell" name="5-7"></div>
-          <div class="grid-cell" name="5-8"></div>
-          <div class="grid-cell" name="5-9"></div>
-          <div class="grid-cell" name="5-10"></div>
-          <div class="grid-cell" id="margin" name="5-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="6-0"></div>
-          <div class="grid-cell" name="6-1"></div>
-          <div class="grid-cell" name="6-2"></div>
-          <div class="grid-cell" name="6-3"></div>
-          <div class="grid-cell" name="6-4"></div>
-          <div class="grid-cell" name="6-5"></div>
-          <div class="grid-cell" name="6-6"></div>
-          <div class="grid-cell" name="6-7"></div>
-          <div class="grid-cell" name="6-8"></div>
-          <div class="grid-cell" name="6-9"></div>
-          <div class="grid-cell" name="6-10"></div>
-          <div class="grid-cell" id="margin" name="6-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="7-0"></div>
-          <div class="grid-cell" name="7-1"></div>
-          <div class="grid-cell" name="7-2"></div>
-          <div class="grid-cell" name="7-3"></div>
-          <div class="grid-cell" name="7-4"></div>
-          <div class="grid-cell" name="7-5"></div>
-          <div class="grid-cell" name="7-6"></div>
-          <div class="grid-cell" name="7-7"></div>
-          <div class="grid-cell" name="7-8"></div>
-          <div class="grid-cell" name="7-9"></div>
-          <div class="grid-cell" name="7-10"></div>
-          <div class="grid-cell" id="margin" name="7-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="8-0"></div>
-          <div class="grid-cell" name="8-1"></div>
-          <div class="grid-cell" name="8-2"></div>
-          <div class="grid-cell" name="8-3"></div>
-          <div class="grid-cell" name="8-4"></div>
-          <div class="grid-cell" name="8-5"></div>
-          <div class="grid-cell" name="8-6"></div>
-          <div class="grid-cell" name="8-7"></div>
-          <div class="grid-cell" name="8-8"></div>
-          <div class="grid-cell" name="8-9"></div>
-          <div class="grid-cell" name="8-10"></div>
-          <div class="grid-cell" id="margin" name="8-11"></div>
-        </div> 
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="9-0"></div>
-          <div class="grid-cell" name="9-1"></div>
-          <div class="grid-cell" name="9-2"></div>
-          <div class="grid-cell" name="9-3"></div>
-          <div class="grid-cell" name="9-4"></div>
-          <div class="grid-cell" name="9-5"></div>
-          <div class="grid-cell" name="9-6"></div>
-          <div class="grid-cell" name="9-7"></div>
-          <div class="grid-cell" name="9-8"></div>
-          <div class="grid-cell" name="9-9"></div>
-          <div class="grid-cell" name="9-10"></div>
-          <div class="grid-cell" id="margin" name="9-11"></div>
-        </div>     
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="10-0"></div>
-          <div class="grid-cell" name="10-1"></div>
-          <div class="grid-cell" name="10-2"></div>
-          <div class="grid-cell" name="10-3"></div>
-          <div class="grid-cell" name="10-4"></div>
-          <div class="grid-cell" name="10-5"></div>
-          <div class="grid-cell" name="10-6"></div>
-          <div class="grid-cell" name="10-7"></div>
-          <div class="grid-cell" name="10-8"></div>
-          <div class="grid-cell" name="10-9"></div>
-          <div class="grid-cell" name="10-10"></div>
-          <div class="grid-cell" id="margin" name="10-11"></div>
-        </div>    
-        <div class="grid-row">
-          <div class="grid-cell" id="margin" name="11-0"></div>
-          <div class="grid-cell" id="margin" name="11-1"></div>
-          <div class="grid-cell" id="margin" name="11-2"></div>
-          <div class="grid-cell" id="margin" name="11-3"></div>
-          <div class="grid-cell" id="margin" name="11-4"></div>
-          <div class="grid-cell" id="margin" name="11-5"></div>
-          <div class="grid-cell" id="margin" name="11-6"></div>
-          <div class="grid-cell" id="margin" name="11-7"></div>
-          <div class="grid-cell" id="margin" name="11-8"></div>
-          <div class="grid-cell" id="margin" name="11-9"></div>
-          <div class="grid-cell" id="margin" name="11-10"></div>
-          <div class="grid-cell" id="margin" name="11-11"></div>
-        </div>               
-    </div>
 
-<p>Blow through the empty spaces!</p>
+
 
 </body>
 
