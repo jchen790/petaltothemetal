@@ -11,3 +11,14 @@ function toggle(e1, e2) {
         y.style.display = 'block';
     }         
 }
+
+//test function
+function blooming(name) {
+    let e = document.getElementsByName(name);
+    e[0].innerHTML = "<img class='dandelion' id='new' src='images/dandelion.png' width='0'>";
+    
+    for (i = 0; i < 40; i++) { 
+        setTimeout(function(){ document.getElementById('new').width += 1 }, 2000);
+    }
+}
+

@@ -136,3 +136,8 @@ p {
     margin-top: 20px;
     padding-top: 650px;
 }
+
+.dandelion {
+    display: block;
+    margin: auto;
+}
