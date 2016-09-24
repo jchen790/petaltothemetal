@@ -132,7 +132,7 @@ h1 {
     margin-right: 15px;
     float: right;
     border-radius: 100px;
-    background: rgba(238, 228, 218, 0.35);
+    background: rgba(255, 255, 218, 0.35);
     margin-bottom: 15px;
 }
 
@@ -170,5 +170,10 @@ p {
     font-family: "Verdana";
     font-size: 20px;
     text-align: center;
+}
+
+.dandelion {
+    display: block;
+    margin: auto;
 }
 
