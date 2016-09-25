@@ -4,14 +4,27 @@
 		<title>Dandelion</title>
     	<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link type = "text/css" rel = "stylesheet" href = "blowstyle.css"/>
-		<link rel "stylehsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<link rel="stylehsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+		<script>
+			var levelup = 1;
+		</script>
 	</head>
 
-<body class="body" onkeypress = "keyPressCount()" onkeydown="run(event.keyCode)" onload="boarder();setready(1,Lvl[0][0]);setready(2,Lvl[1][0]);Filler();">
+<body class="body" onkeypress = "keyPressCount()" 
+      onkeydown="run(event.keyCode)" 
+      onload="Filler(); 
+	boarder();
+	setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]); 
+	Moving(0,0);">
 	<div class="row" id = "top">
     <img src="images/dandelion_logo.png" class="logo top-left">
-        <div class = "bestScore top-right"><h5>BEST</h5></div>
-        <div class = "scoreBoard top-right"><h5>SCORE</h5></div>
+        <div class = "bestScore top-right"><h5>BEST</h5>
+       		<div id = "best">0</div>
+       	</div>
+        <div class = "scoreBoard top-right"><h5>SCORE</h5>
+        	<div id="score">0</div>
+        </div>
         <button class="menu-button returning" onclick="toggle('grid', 'start-menu')"><p class="small">Main menu</p></button>
 	</div>
 
@@ -26,34 +39,44 @@
         <div class="menu-row">
           <h3>Choose a level</h3>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 1</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=1; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 1</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 2</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=2; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 2</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 3</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=3; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 3</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 4</button>
+            <button class="level-button" onclick="toggle('menu', 'grid');levelup=4; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 4</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 5</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=5; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 5</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 6</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=6; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 6</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 7</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=7; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 7</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 8</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=8; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 8</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 9</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=9; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 9</button>
           </div>
           <div class="menu-cell center-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid')">Level 10</button>
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=10; setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);">Level 10</button>
           </div>
         </div>
       </div>
@@ -269,3 +292,5 @@
     <script src="blowscript.js"></script>
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </html>
+
+

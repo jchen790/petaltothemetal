@@ -17,6 +17,15 @@ h3 {
 h5 {
     font-family: "Verdana";
     margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+#score {
+    top: 10px;
+}
+
+#best {
+    margin-bottom: 10px;
 }
 
 #top {
@@ -241,7 +250,7 @@ p {
     left: 105px;
 }
 
-div.popup {
+.popup {
     margin-top: 0px;
     position: fixed;
     padding: 20px;
@@ -277,3 +286,4 @@ div.popup {
 .lose-modal {
     display: none;
 }
+
