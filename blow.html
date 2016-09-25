@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Dandelion</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link type="text/css" rel="stylesheet" href="blowstyle.css" />
+  <link rel="stylehsheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script>
+			var levelup = 1;
+		</script>
+</head>
+
+<body class="body" onkeypress="keyPressCount()" onkeydown="run(event.keyCode)" onload="Filler(); 
+	boarder();
+	setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]); 
+	Moving(0,0);">
+  <div class="row" id="top">
+    <img src="images/dandelion_logo.png" class="logo top-left" alt="Dandelion logo">
+    <div class="bestScore top-right" id="Goal">
+      <h5>GOAL</h5>
+      <div id="best">0</div>
+    </div>
+    <div class="scoreBoard top-right" id="Moves">
+      <h5>MOVES</h5>
+      <div id="score">0</div>
+    </div>
+    <button class="menu-button returning" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');"><p class="small">Main menu</p></button>
+  </div>
+
+  <div class="center" id="start-menu">
+    <div>
+      <button class="menu-button" id="Start-new-game" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><h3>Start new game</h3></button>
+    </div>
+
+    <h3>Or</h3>
+
+    <div class="menu" id="choose-level">
+      <div class="menu-row">
+        <h3>Choose a level</h3>
+        <div class="menu-cell">
+          <button class="level-button" id="level1" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="2">Level 1</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level2" onclick="toggle('start-menu', 'grid');levelup=2; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="3">Level 2</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level3" onclick="toggle('start-menu', 'grid');levelup=3; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="4">Level 3</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level4" onclick="toggle('start-menu', 'grid');levelup=4; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="5">Level 4</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level5" onclick="toggle('start-menu', 'grid');levelup=5;Filler(); boarder(); setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="6">Level 5</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level6" onclick="toggle('start-menu', 'grid');levelup=6; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="7">Level 6</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level7" onclick="toggle('start-menu', 'grid');levelup=7; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="8">Level 7</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level8" onclick="toggle('start-menu', 'grid');levelup=8; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="9">Level 8</button>
+        </div>
+        <div class="menu-cell">
+          <button class="level-button" id="level9" onclick="toggle('start-menu', 'grid');levelup=9; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="10">Level 9</button>
+        </div>
+        <div class="menu-cell center-cell">
+          <button class="level-button" id="level10" onclick="toggle('start-menu', 'grid');levelup=10; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="11">Level 10</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="grid-container center" id="grid">
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="0-0"></div>
+      <div class="grid-cell" id="margin" name="0-1"></div>
+      <div class="grid-cell" id="margin" name="0-2"></div>
+      <div class="grid-cell" id="margin" name="0-3"></div>
+      <div class="grid-cell" id="margin" name="0-4"></div>
+      <div class="grid-cell" id="margin" name="0-5"></div>
+      <div class="grid-cell" id="margin" name="0-6"></div>
+      <div class="grid-cell" id="margin" name="0-7"></div>
+      <div class="grid-cell" id="margin" name="0-8"></div>
+      <div class="grid-cell" id="margin" name="0-9"></div>
+      <div class="grid-cell" id="margin" name="0-10"></div>
+      <div class="grid-cell" id="margin" name="0-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="1-0"></div>
+      <div class="grid-cell" name="1-1"></div>
+      <div class="grid-cell" name="1-2"></div>
+      <div class="grid-cell" name="1-3"></div>
+      <div class="grid-cell" name="1-4"></div>
+      <div class="grid-cell" name="1-5"></div>
+      <div class="grid-cell" name="1-6"></div>
+      <div class="grid-cell" name="1-7"></div>
+      <div class="grid-cell" name="1-8"></div>
+      <div class="grid-cell" name="1-9"></div>
+      <div class="grid-cell" name="1-10"></div>
+      <div class="grid-cell" id="margin" name="1-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="2-0"></div>
+      <div class="grid-cell" name="2-1"></div>
+      <div class="grid-cell" name="2-2"></div>
+      <div class="grid-cell" name="2-3"></div>
+      <div class="grid-cell" name="2-4"></div>
+      <div class="grid-cell" name="2-5"></div>
+      <div class="grid-cell" name="2-6"></div>
+      <div class="grid-cell" name="2-7"></div>
+      <div class="grid-cell" name="2-8"></div>
+      <div class="grid-cell" name="2-9"></div>
+      <div class="grid-cell" name="2-10"></div>
+      <div class="grid-cell" id="margin" name="2-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="3-0"></div>
+      <div class="grid-cell" name="3-1"></div>
+      <div class="grid-cell" name="3-2"></div>
+      <div class="grid-cell" name="3-3"></div>
+      <div class="grid-cell" name="3-4"></div>
+      <div class="grid-cell" name="3-5"></div>
+      <div class="grid-cell" name="3-6"></div>
+      <div class="grid-cell" name="3-7"></div>
+      <div class="grid-cell" name="3-8"></div>
+      <div class="grid-cell" name="3-9"></div>
+      <div class="grid-cell" name="3-10"></div>
+      <div class="grid-cell" id="margin" name="3-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="4-0"></div>
+      <div class="grid-cell" name="4-1"></div>
+      <div class="grid-cell" name="4-2"></div>
+      <div class="grid-cell" name="4-3"></div>
+      <div class="grid-cell" name="4-4"></div>
+      <div class="grid-cell" name="4-5"></div>
+      <div class="grid-cell" name="4-6"></div>
+      <div class="grid-cell" name="4-7"></div>
+      <div class="grid-cell" name="4-8"></div>
+      <div class="grid-cell" name="4-9"></div>
+      <div class="grid-cell" name="4-10"></div>
+      <div class="grid-cell" id="margin" name="4-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="5-0"></div>
+      <div class="grid-cell" name="5-1"></div>
+      <div class="grid-cell" name="5-2"></div>
+      <div class="grid-cell" name="5-3"></div>
+      <div class="grid-cell" name="5-4"></div>
+      <div class="grid-cell" name="5-5"></div>
+      <div class="grid-cell" name="5-6"></div>
+      <div class="grid-cell" name="5-7"></div>
+      <div class="grid-cell" name="5-8"></div>
+      <div class="grid-cell" name="5-9"></div>
+      <div class="grid-cell" name="5-10"></div>
+      <div class="grid-cell" id="margin" name="5-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="6-0"></div>
+      <div class="grid-cell" name="6-1"></div>
+      <div class="grid-cell" name="6-2"></div>
+      <div class="grid-cell" name="6-3"></div>
+      <div class="grid-cell" name="6-4"></div>
+      <div class="grid-cell" name="6-5"></div>
+      <div class="grid-cell" name="6-6"></div>
+      <div class="grid-cell" name="6-7"></div>
+      <div class="grid-cell" name="6-8"></div>
+      <div class="grid-cell" name="6-9"></div>
+      <div class="grid-cell" name="6-10"></div>
+      <div class="grid-cell" id="margin" name="6-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="7-0"></div>
+      <div class="grid-cell" name="7-1"></div>
+      <div class="grid-cell" name="7-2"></div>
+      <div class="grid-cell" name="7-3"></div>
+      <div class="grid-cell" name="7-4"></div>
+      <div class="grid-cell" name="7-5"></div>
+      <div class="grid-cell" name="7-6"></div>
+      <div class="grid-cell" name="7-7"></div>
+      <div class="grid-cell" name="7-8"></div>
+      <div class="grid-cell" name="7-9"></div>
+      <div class="grid-cell" name="7-10"></div>
+      <div class="grid-cell" id="margin" name="7-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="8-0"></div>
+      <div class="grid-cell" name="8-1"></div>
+      <div class="grid-cell" name="8-2"></div>
+      <div class="grid-cell" name="8-3"></div>
+      <div class="grid-cell" name="8-4"></div>
+      <div class="grid-cell" name="8-5"></div>
+      <div class="grid-cell" name="8-6"></div>
+      <div class="grid-cell" name="8-7"></div>
+      <div class="grid-cell" name="8-8"></div>
+      <div class="grid-cell" name="8-9"></div>
+      <div class="grid-cell" name="8-10"></div>
+      <div class="grid-cell" id="margin" name="8-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="9-0"></div>
+      <div class="grid-cell" name="9-1"></div>
+      <div class="grid-cell" name="9-2"></div>
+      <div class="grid-cell" name="9-3"></div>
+      <div class="grid-cell" name="9-4"></div>
+      <div class="grid-cell" name="9-5"></div>
+      <div class="grid-cell" name="9-6"></div>
+      <div class="grid-cell" name="9-7"></div>
+      <div class="grid-cell" name="9-8"></div>
+      <div class="grid-cell" name="9-9"></div>
+      <div class="grid-cell" name="9-10"></div>
+      <div class="grid-cell" id="margin" name="9-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="10-0"></div>
+      <div class="grid-cell" name="10-1"></div>
+      <div class="grid-cell" name="10-2"></div>
+      <div class="grid-cell" name="10-3"></div>
+      <div class="grid-cell" name="10-4"></div>
+      <div class="grid-cell" name="10-5"></div>
+      <div class="grid-cell" name="10-6"></div>
+      <div class="grid-cell" name="10-7"></div>
+      <div class="grid-cell" name="10-8"></div>
+      <div class="grid-cell" name="10-9"></div>
+      <div class="grid-cell" name="10-10"></div>
+      <div class="grid-cell" id="margin" name="10-11"></div>
+    </div>
+    <div class="grid-row">
+      <div class="grid-cell" id="margin" name="11-0"></div>
+      <div class="grid-cell" id="margin" name="11-1"></div>
+      <div class="grid-cell" id="margin" name="11-2"></div>
+      <div class="grid-cell" id="margin" name="11-3"></div>
+      <div class="grid-cell" id="margin" name="11-4"></div>
+      <div class="grid-cell" id="margin" name="11-5"></div>
+      <div class="grid-cell" id="margin" name="11-6"></div>
+      <div class="grid-cell" id="margin" name="11-7"></div>
+      <div class="grid-cell" id="margin" name="11-8"></div>
+      <div class="grid-cell" id="margin" name="11-9"></div>
+      <div class="grid-cell" id="margin" name="11-10"></div>
+      <div class="grid-cell" id="margin" name="11-11"></div>
+    </div>
+
+    <div class="description" id="description">
+      <p id="levelNumber">
+      </p>
+      <p class="small">
+        How to play: Use the arrow keys to spread your seeds (in yellow) across the board in as few moves as possible.
+      </p>
+    </div>
+  </div>
+
+
+  <div class="popup center win-modal" id="win">
+    <div class="dialog">
+      <p></p>
+      <br>
+      <p>Good job!</p>
+      <p>You are one dandy fellow :)</p>
+      <br>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid');levelup++; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Next level</p></button>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="2"><p class="small">Replay level</p></button>
+    </div>
+  </div>
+
+  <div class="popup center lose-modal" id="lose">
+    <div class="dialog">
+      <p></p>
+      <br>
+      <p>Good try!</p>
+      <p>Your luck has gone with the wind...</p>
+      <br>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Replay level</p></button>
+    </div>
+  </div>
+
+  <div class="popup center win-modal" id="ultimate-win">
+    <div class="dialog">
+      <p></p>
+      <br>
+      <p>Congratulations!!</p>
+      <p>You really blossomed in the last level!</p>
+      <br>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Replay level</p></button>
+      <button class="menu-button modal-button" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');" tabindex="2"><p class="small">Return to menu</p></button>
+    </div>
+  </div>
+
+</body>
+
+<script src="blowscript.js"></script>
+
+<script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+<script>
+		$(document).ready(function()
+		{
+			$("button").click(function()
+			{
+				Filler();
+				boarder();
+				setready(1,Lvl[levelup-1][0]);
+				setready(2,Lvl[levelup-1][1]);
+				Moving(0,0);
+			});
+	});
+	</script>
+
+</html>
