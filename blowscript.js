@@ -2,6 +2,7 @@ var pressCount = 0;
 var numrows = 12;
 var numcol = 12;    
 var done = true;
+var level = 0;
 
 function toggle(e1, e2) {
     let x = document.getElementById(e1);
@@ -12,9 +13,11 @@ function toggle(e1, e2) {
 
     document.getElementById('win').style.display = "none";
     document.getElementById('lose').style.display = "none";
+    document.getElementById('ultimate-win').style.display = "none";
 
     pressCount = 0;
     $("#score").html(pressCount);
+    $("#best").html(levelGoals[level]);
 }
 
 //test function
@@ -85,6 +88,8 @@ function Filler()
 
 function setready(val,arr)
 {
+    $("#levelNumber").html("Level "+level+": "+levelTitles[level-1]);
+    $("#best").html(levelGoals[level]);
     //Finds blanks
     for (var i=0; i< arr.length; i++)
     {
@@ -136,7 +141,7 @@ function Moving(x,y)
         {
             if(document.getElementsByName(i+'-'+j)[0].value==1)
             {
-                document.getElementsByName((i)+'-'+(j))[0].style.background="red";
+                document.getElementsByName((i)+'-'+(j))[0].style.background="yellow";
                 //document.getElementsByName(i+'-'+j)[0].value=1;
             
             }
@@ -158,7 +163,12 @@ function Moving(x,y)
     {
         setTimeout(function(){
             //alert("Game over! You win"); 
-            document.getElementById('win').style.display = "block";
+            if(level == 10) {
+                document.getElementById('ultimate-win').style.display = "block";
+            }
+            else{
+                document.getElementById('win').style.display = "block";
+            }
         }, 10);
         
     }
@@ -171,6 +181,10 @@ function Moving(x,y)
 // function readCookie() {
 //     var x = document.cookie;
 // }
+
+function getLevel(x) {
+    level = x;
+}
 
 function run(KeyPressed)
 {
@@ -212,4 +226,29 @@ function run(KeyPressed)
     // }
 }
 
+var levelTitles = [
+    "Dandelion don't tell no lies",
+    "Maybe it's a weed, maybe it's a wish",
+    "Don't ever leaf me alone",
+    "The alien dandelion demands to see your weeder",
+    "Petals to the metal",
+    "If you were a flower, you'd be a damnnnndelion",
+    "Every flower is a soul blossoming in nature",
+    "When dandelions are hungry, they have a light snack",
+    "Weed 'em and reap",
+    "Friends are flowers that never fade"
+]
 
+var levelGoals = [
+    0,
+    20,
+    10,
+    19,
+    15,
+    20,
+    21,
+    26,
+    11,
+    9,
+    22
+]
