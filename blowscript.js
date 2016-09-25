@@ -77,6 +77,7 @@ function Filler()
         for(var y=0;y<numcol;y++)
         {
             document.getElementsByName(x+'-'+y)[0].value=0;
+	document.getElementsByName(x+'-'+y)[0].style.background="rgba(238, 228, 218, 0.35)";
         }
     }
 }
