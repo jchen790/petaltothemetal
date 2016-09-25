@@ -7,10 +7,14 @@ function toggle(e1, e2) {
     let x = document.getElementById(e1);
     let y = document.getElementById(e2);
              
-        x.style.display = 'none';             
-        y.style.display = 'block'; 
+    x.style.display = 'none';  
+    y.style.display = 'block';  
+
+	document.getElementById('win').style.display = "none";
+	document.getElementById('lose').style.display = "none";
 
     pressCount = 0;
+
 }
 
 //test function
