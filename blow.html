@@ -17,12 +17,12 @@
 	setready(2,Lvl[levelup-1][1]); 
 	Moving(0,0);">
   <div class="row" id="top">
-    <img src="images/dandelion_logo.png" class="logo top-left">
-    <div class="bestScore top-right">
+    <img src="images/dandelion_logo.png" class="logo top-left" alt="Dandelion logo">
+    <div class="bestScore top-right" id="Goal">
       <h5>GOAL</h5>
       <div id="best">0</div>
     </div>
-    <div class="scoreBoard top-right">
+    <div class="scoreBoard top-right" id="Moves">
       <h5>MOVES</h5>
       <div id="score">0</div>
     </div>
@@ -31,54 +31,54 @@
 
   <div class="center" id="start-menu">
     <div>
-      <button class="menu-button" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);"><h3>Start new game</h3></button>
+      <button class="menu-button" id="Start-new-game" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><h3>Start new game</h3></button>
     </div>
 
     <h3>Or</h3>
 
-    <div class="menu">
+    <div class="menu" id="choose-level">
       <div class="menu-row">
         <h3>Choose a level</h3>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 1</button>
+          <button class="level-button" id="level1" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="2">Level 1</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=2; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 2</button>
+          <button class="level-button" id="level2" onclick="toggle('start-menu', 'grid');levelup=2; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="3">Level 2</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=3; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 3</button>
+          <button class="level-button" id="level3" onclick="toggle('start-menu', 'grid');levelup=3; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="4">Level 3</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=4; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 4</button>
+          <button class="level-button" id="level4" onclick="toggle('start-menu', 'grid');levelup=4; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="5">Level 4</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=5;Filler(); boarder(); setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 5</button>
+          <button class="level-button" id="level5" onclick="toggle('start-menu', 'grid');levelup=5;Filler(); boarder(); setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="6">Level 5</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=6; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 6</button>
+          <button class="level-button" id="level6" onclick="toggle('start-menu', 'grid');levelup=6; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="7">Level 6</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=7; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 7</button>
+          <button class="level-button" id="level7" onclick="toggle('start-menu', 'grid');levelup=7; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="8">Level 7</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=8; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 8</button>
+          <button class="level-button" id="level8" onclick="toggle('start-menu', 'grid');levelup=8; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="9">Level 8</button>
         </div>
         <div class="menu-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=9; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 9</button>
+          <button class="level-button" id="level9" onclick="toggle('start-menu', 'grid');levelup=9; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="10">Level 9</button>
         </div>
         <div class="menu-cell center-cell">
-          <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=10; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);">Level 10</button>
+          <button class="level-button" id="level10" onclick="toggle('start-menu', 'grid');levelup=10; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="11">Level 10</button>
         </div>
       </div>
     </div>
@@ -272,8 +272,9 @@
       <p>You are one dandy fellow :)</p>
       <br>
       <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid');levelup++; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);"><p class="small">Next level</p></button>
-      <button class="menu-button modal-button" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');"><p class="small">Return to menu</p></button>
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Next level</p></button>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="2"><p class="small">Replay level</p></button>
     </div>
   </div>
 
@@ -285,8 +286,7 @@
       <p>Your luck has gone with the wind...</p>
       <br>
       <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
-	setready(2,Lvl[levelup-1][1]);getLevel(levelup);"><p class="small">Replay level</p></button>
-      <button class="menu-button modal-button" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');"><p class="small">Return to menu</p></button>
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Replay level</p></button>
     </div>
   </div>
 
@@ -297,7 +297,9 @@
       <p>Congratulations!!</p>
       <p>You really blossomed in the last level!</p>
       <br>
-      <button class="menu-button modal-button" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');"><p class="small">Return to menu</p></button>
+      <button class="menu-button modal-button" onclick="toggle('start-menu', 'grid'); Filler(); boarder();setready(1,Lvl[levelup-1][0]);
+	setready(2,Lvl[levelup-1][1]);getLevel(levelup);" tabindex="1"><p class="small">Replay level</p></button>
+      <button class="menu-button modal-button" onclick="levelup=0;getLevel(levelup);toggle('grid', 'start-menu');" tabindex="2"><p class="small">Return to menu</p></button>
     </div>
   </div>
 
@@ -307,8 +309,6 @@
 
 <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 <script>
-    
-
 		$(document).ready(function()
 		{
 			$("button").click(function()
