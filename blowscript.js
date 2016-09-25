@@ -163,10 +163,11 @@ function Moving(x,y)
     {
         setTimeout(function(){
             //alert("Game over! You win"); 
-            if(level == 10) {
+            if(pressCount > levelGoals[level]) {
+                document.getElementById('lose').style.display = "block";
+            } else if(level == 10) {
                 document.getElementById('ultimate-win').style.display = "block";
-            }
-            else{
+            } else{
                 document.getElementById('win').style.display = "block";
             }
         }, 10);
@@ -229,7 +230,7 @@ var levelTitles = [
     "Don't ever leaf me alone",
     "The alien dandelion demands to see your weeder",
     "Petals to the metal",
-    "If you were a flower, you'd be a damnnnndelion",
+    "If you were a flower, you'd be a damnnnn-delion",
     "Every flower is a soul blossoming in nature",
     "When dandelions are hungry, they have a light snack",
     "Weed 'em and reap",

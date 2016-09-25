@@ -288,3 +288,7 @@ p {
     display: none;
 }
 
+:focus { 
+    outline: 1.5px dotted black; 
+    border-radius: 6px;
+} 
