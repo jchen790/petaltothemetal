@@ -154,7 +154,10 @@ function Moving(x,y)
     
     if(done)
     {
-        setTimeout(function(){alert("Game over! You win"); }, 10);
+        setTimeout(function(){
+            //alert("Game over! You win"); 
+            document.getElementById('win').style.display = "block";
+        }, 10);
         
     }
 }
