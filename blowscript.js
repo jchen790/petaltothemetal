@@ -4,6 +4,9 @@ function toggle(e1, e2) {
              
         x.style.display = 'none';             
         y.style.display = 'block';  
+
+	document.getElementById('win').style.display = "none";
+	document.getElementById('lose').style.display = "none";
 }
 
 //test function
