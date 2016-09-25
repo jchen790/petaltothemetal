@@ -221,9 +221,6 @@ function run(KeyPressed)
             break;
     }
     $("#score").html(pressCount);
-    // if(document.getElementById('#score') <= document.getElementByID('#best').readCookie() {
-    //     $("#best").html(pressCount);
-    // }
 }
 
 var levelTitles = [
