@@ -10,11 +10,11 @@ function toggle(e1, e2) {
     x.style.display = 'none';  
     y.style.display = 'block';  
 
-	document.getElementById('win').style.display = "none";
-	document.getElementById('lose').style.display = "none";
+    document.getElementById('win').style.display = "none";
+    document.getElementById('lose').style.display = "none";
 
     pressCount = 0;
-
+    $("#score").html(pressCount);
 }
 
 //test function
@@ -78,7 +78,7 @@ function Filler()
         for(var y=0;y<numcol;y++)
         {
             document.getElementsByName(x+'-'+y)[0].value=0;
-	document.getElementsByName(x+'-'+y)[0].style.background="rgba(238, 228, 218, 0.35)";
+            document.getElementsByName(x+'-'+y)[0].style.background="rgba(238, 228, 218, 0.35)";
         }
     }
 }
@@ -161,6 +161,14 @@ function Moving(x,y)
     }
 }
 
+// function createCookie() {
+//     document.cookie = "cookie1 = " + pressCount;
+// }
+
+// function readCookie() {
+//     var x = document.cookie;
+// }
+
 function run(KeyPressed)
 {
     if(!(KeyPressed >= 37 && KeyPressed <=40) || (done))return false;
@@ -196,14 +204,9 @@ function run(KeyPressed)
             break;
     }
     $("#score").html(pressCount);
+    // if(document.getElementById('#score') <= document.getElementByID('#best').readCookie() {
+    //     $("#best").html(pressCount);
+    // }
 }
-
-// function createCookie() {
-//     document.cookie = "username = pressCount";
-// }
-
-// function readCookie() {
-//     var x = document.cookie;
-// }
 
 
