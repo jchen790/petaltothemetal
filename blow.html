@@ -39,43 +39,43 @@
         <div class="menu-row">
           <h3>Choose a level</h3>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=1; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=1; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 1</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=2; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=2; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 2</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=3; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=3; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 3</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=4; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=4; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 4</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=5; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=5;Filler(); boarder(); setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 5</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=6; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=6; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 6</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=7; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=7; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 7</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=8; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=8; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 8</button>
           </div>
           <div class="menu-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=9; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=9; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 9</button>
           </div>
           <div class="menu-cell center-cell">
-            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=10; setready(1,Lvl[levelup-1][0]);
+            <button class="level-button" onclick="toggle('start-menu', 'grid');levelup=10; Filler(); boarder();setready(1,Lvl[levelup-1][0]);
 	setready(2,Lvl[levelup-1][1]);">Level 10</button>
           </div>
         </div>
@@ -290,7 +290,21 @@
 </body>
 
     <script src="blowscript.js"></script>
+	
     <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+	<script>
+		$(document).ready(function()
+		{
+			$("button").click(function()
+			{
+				Filler();
+				boarder();
+				setready(1,Lvl[levelup-1][0]);
+				setready(2,Lvl[levelup-1][1]);
+				Moving(0,0);
+			});
+	});
+	</script>
 </html>
 
 
