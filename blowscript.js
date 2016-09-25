@@ -65,6 +65,7 @@ function boarder()
             if((x==0|| x==11) || (y==0 || y==11))
             {
                 document.getElementsByName(x+'-'+y)[0].value=2;
+                document.getElementsByName(x+'-'+y)[0].style.background="grey";
             }
         }
     }
